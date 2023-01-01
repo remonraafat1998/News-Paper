@@ -1,0 +1,35 @@
+<section class="sport mt150">
+  <div class="container">
+    <!-- repo -->
+<div class="repo repo-body">
+  <span class="repo-title">الأخبار</span>
+</div>
+
+<!-- content -->
+ <div class="content">
+  <!-- boxes -->
+  <div class="row" *ngIf="!loading">
+    <div class=" col-lg-4 col-md-6  mt-3 mb-3" *ngFor="let sport of dataSport;index as i">
+      <a href="#" routerLink="{{i+'/'+sport.title}}">
+        <app-single-news [data]="sport"></app-single-news>
+      </a>
+    </div>
+  </div>
+  <div class="load text-center" *ngIf="loading">
+    <app-loader></app-loader>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+ </div>
+  </div>
+</section>

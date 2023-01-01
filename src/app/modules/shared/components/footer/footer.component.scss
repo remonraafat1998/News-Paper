@@ -1,0 +1,72 @@
+
+          $social: (
+            "facebook" :  #0F92F3,
+            "youtube" : red,
+            "twitter" : #5cafee,
+            "instagram": linear-gradient( to right, #8A00FF, #FF0061, yellow)
+          );
+
+
+
+footer
+{
+  position: relative;
+  bottom: 0;
+  left: 0;
+  background-color: #eee;
+  .top-footer
+  {
+    ul
+    {
+      display: flex;
+      gap: 40px;
+      li
+      {
+      a
+      {
+        background: #ffffff;
+        width: 48px;
+        height: 48px;
+        display: inline-block;
+        line-height: 52px;
+        text-align: center;
+        border-radius: 40px;
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 2px 10px #00000026;
+        transition: all .4s ease-out;
+      }
+      }
+    }
+  }
+.center-footer
+{
+  h1
+  {
+    font-size: 28px;
+    color: #666;
+  }
+  ul
+  {
+    li
+    {
+      margin: 18px 0;
+      a
+      {
+     font-size: 14px;
+      }
+    }
+  }
+}
+}
+
+
+@each $name,$color in $social
+{
+.#{$name}
+{
+  &:hover
+  {
+    color: $color;
+  }
+}
+}

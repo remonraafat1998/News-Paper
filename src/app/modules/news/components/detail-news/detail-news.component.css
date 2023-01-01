@@ -1,0 +1,42 @@
+.detail-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.detail-body .content .title h1 {
+  font-size: 24px;
+  color: #333;
+}
+.detail-body .content .image {
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+  width: 95%;
+}
+.detail-body .content .image img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.detail-body .content .desc {
+  padding: 30px 14px;
+}
+.detail-body .content .desc p {
+  line-height: 64px;
+  font-size: 18px;
+  letter-spacing: 1.1;
+}
+.detail-body .content .information-post > div {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 16px;
+}
+.detail-body .content .information-post .main-site a {
+  color: #333;
+}
+.detail-body .content .information-post .main-site a:hover {
+  color: var(--mainColor);
+}/*# sourceMappingURL=detail-news.component.css.map */

@@ -1,0 +1,52 @@
+<section class="details mt150">
+  <div class="container">
+         <!-- repo -->
+      <div class="title repo-body ">
+      <span class="repo-title">العنوان</span>
+      </div>
+
+    <!-- detail body -->
+    <div class="detail-body">
+     <!-- content -->
+    <div class="content" *ngFor="let item of getNews">
+    <!-- title -->
+    <div class="title bk-gey  p-3 bord-b-white">
+      <h1>{{item.title}}</h1>
+    </div>
+
+    <!-- image -->
+    <div class="image bk-gey bord-b-white w-100">
+      <figure style="margin: 0;">
+        <picture>
+          <img src="{{item.urlToImage}}"  loading="lazy" alt="{{item.title}}" title="{{item.title}}">
+          <figcaption>{{item.author}}</figcaption>
+        </picture>
+      </figure>
+    </div>
+    <!-- Description -->
+    <div class="desc bk-gey bord-b-white w-100">
+      <p>{{item.description}}</p>
+    </div>
+    <!-- information -->
+    <div class="information-post bk-gey bord-b-white w-100">
+      <!-- writer name -->
+       <div class="writer">
+        <span>المؤلف</span>
+        <span>{{" : "+item.author}}</span>
+       </div>
+       <!-- Main Site -->
+       <div class="main-site">
+          <a href="{{item.url}}" target="_blank">
+            الموقع الكاتب
+          </a>
+       </div>
+    </div>
+    </div>
+
+    </div>
+    <!-- loader -->
+    <div class="load text-center" *ngIf="loading">
+      <app-loader></app-loader>
+     </div>
+  </div>
+</section>

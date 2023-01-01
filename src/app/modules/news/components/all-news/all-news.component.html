@@ -1,0 +1,23 @@
+
+  <div class="choose-country w-100">
+    <select (change)="selectCountry($event)">
+      <option value="eg">Egypt</option>
+      <option *ngFor="let country of allCountry" value="{{country.value}}">{{country.name}}</option>
+     </select>
+  </div>
+<!-- repo -->
+<div class="repo repo-body ">
+  <span class="repo-title">الأخبار</span>
+</div>
+  <!-- boxes -->
+<div class="row" *ngIf="!loading">
+  <div class=" col-lg-4 col-md-6  mt-3 mb-3" *ngFor="let news of dataMain;let i = index">
+    <a href="#" routerLink="articles/{{i+'/'+news.title}}">
+      <app-single-news [data]="news"></app-single-news>
+    </a>
+  </div>
+</div>
+<div class="load text-center" *ngIf="loading">
+  <app-loader></app-loader>
+ </div>
+

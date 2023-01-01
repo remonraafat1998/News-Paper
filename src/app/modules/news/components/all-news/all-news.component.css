@@ -1,0 +1,22 @@
+.choose-country {
+  position: relative;
+}
+.choose-country select {
+  width: 100%;
+  padding: 4px 10px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #333;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.choose-country select option {
+  color: #fff;
+  cursor: pointer;
+}/*# sourceMappingURL=all-news.component.css.map */
