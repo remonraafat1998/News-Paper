@@ -26,7 +26,7 @@ getSportNews()
   this.serv.getCategory(count).subscribe((data:any)=> {
    this.getObjSport= data.articles[this.id]
    this.getSport.push(this.getObjSport)
-  })
+  },err=> alert(err))
 
 }
 }

@@ -20,6 +20,6 @@ getData()
  this.getDataSports.getCategory(localStorage.getItem('_SelectCountry')!).subscribe((data:any)=> {
   this.dataObject = data.articles
   this.dataSport = this.dataObject
- })
+ },err=>alert(err))
 }
 }

@@ -29,7 +29,7 @@ getNewsSelect()
     this.detailNews = data.articles[this.id]
     console.log( this.detailNews)
     this.getNews.push(this.detailNews)
-  })
+  },err=> alert(err))
 }
 
 ngOnDestroy(): void {

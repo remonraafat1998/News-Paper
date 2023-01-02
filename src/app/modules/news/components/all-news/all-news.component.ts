@@ -27,7 +27,7 @@ selectCountry(event:any)
      this.getApi.getSpecificCountry(selectC).subscribe((data:any)=> {
      this.dataMain = data.articles
      this.loading = false
-    })
+    },err=>alert(err))
 }
 // defalut county
 defaultCountry()
@@ -37,7 +37,7 @@ defaultCountry()
     this.getApi.getMainCountry().subscribe((data:any)=> {
     this.dataMain = data.articles
     this.loading = false
-  })
+  },err => alert(err))
 }
 
 ngOnDestroy(): void {
