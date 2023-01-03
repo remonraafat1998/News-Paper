@@ -12,6 +12,7 @@ id?:any
 loading?:any;
 getObjSport:object = {}
 getSport:any[] = []
+error?:string = ''
   constructor(private activatedR:ActivatedRoute,private serv:GetApiNewsService){
   this.id = this.activatedR.snapshot.paramMap.get('index')
   console.log(this.id)
@@ -26,7 +27,7 @@ getSportNews()
   this.serv.getCategory(count).subscribe((data:any)=> {
    this.getObjSport= data.articles[this.id]
    this.getSport.push(this.getObjSport)
-  },err=> alert(err))
+  },err=> alert(this.error = err))
 
 }
 }

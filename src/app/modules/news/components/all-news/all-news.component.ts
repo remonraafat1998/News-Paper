@@ -13,6 +13,7 @@ export class AllNewsComponent implements OnInit,OnDestroy {
   allCountry = [{value:'ru',name:'Russia'},{value:'tr',name:'Turky'},{value:'us',name:'USA'}]
   unspecif?: Subscription
   unmain?: Subscription
+  error?:string = ""
  constructor(private getApi:GetApiNewsService){}
 
   ngOnInit(): void {
@@ -27,7 +28,7 @@ selectCountry(event:any)
      this.getApi.getSpecificCountry(selectC).subscribe((data:any)=> {
      this.dataMain = data.articles
      this.loading = false
-    },err=>alert(err))
+    },err=>alert(this.error = err))
 }
 // defalut county
 defaultCountry()
@@ -37,7 +38,7 @@ defaultCountry()
     this.getApi.getMainCountry().subscribe((data:any)=> {
     this.dataMain = data.articles
     this.loading = false
-  },err => alert(err))
+  },err => alert(this.error = err))
 }
 
 ngOnDestroy(): void {
